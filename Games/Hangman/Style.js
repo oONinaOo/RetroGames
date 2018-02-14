@@ -6,13 +6,29 @@ var Style = StyleSheet.create({
     },
 
     displayContainer: {
-        flex:6,
+        flex:3,
         backgroundColor: '#193441'
     },
 
     inputContainer: {
         flex: 4,
         backgroundColor: '#3E606F'
+    },
+
+    wordContainer: {
+        flex: 1,
+        backgroundColor: 'red'
+    },
+
+    hintContainer: {
+        flex: 1,
+        backgroundColor: 'red'
+    },
+
+    wordText: {
+
+        fontSize: 36,
+        fontWeight: 'bold'
     },
 
     inputButton: {

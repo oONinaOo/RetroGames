@@ -4,6 +4,7 @@ import Style from './Style';
 import {TouchableOpacity, Text} from 'react-native';
 
 export default class InputButton extends React.Component{
+
    render() {
           return (
               <Button style= {Style.inputButton}
