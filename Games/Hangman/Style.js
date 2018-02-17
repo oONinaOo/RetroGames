@@ -5,24 +5,28 @@ var Style = StyleSheet.create({
         flex: 1
     },
 
+    headerContainer: {
+        flex: 0.5,
+        backgroundColor: '#efefef'
+    },
     displayContainer: {
-        flex:3,
-        backgroundColor: '#193441'
+        flex: 3.5,
+        backgroundColor: '#efefef'
     },
 
     inputContainer: {
-        flex: 4,
-        backgroundColor: '#3E606F'
+        flex: 3,
+        backgroundColor: '#d1d1d1'
     },
 
     wordContainer: {
         flex: 1,
-        backgroundColor: 'red'
+        backgroundColor: '#efefef'
     },
 
     hintContainer: {
         flex: 1,
-        backgroundColor: 'red'
+        backgroundColor: '#efefef'
     },
 
     wordText: {

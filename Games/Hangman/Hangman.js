@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'underscore';
 import {Container, Content, Button, View, Text} from 'native-base';
-import {Alert} from 'react-native';
+import {Alert, Image} from 'react-native';
 import Style from './Style';
 import InputButton from './Keyboard';
 
@@ -14,6 +14,7 @@ const inputButtons = [
 
 var guessedLetters = [];
 const data = require('./Words.json');
+
 
 
 export default class Hangman extends React.Component {
@@ -40,18 +41,17 @@ export default class Hangman extends React.Component {
 render() {
         return (
             <View style={Style.rootContainer}>
+                <View style={Style.headerContainer}>
+                </View>
+                <View style={Style.displayContainer}>
+                    {this._renderImage()}
+                </View>
+                <View style={Style.wordContainer}>
+                     {this._validate()}
+                </View>
                 <View style={Style.hintContainer}>
                     <Text>{this.state.hint}</Text>
                 </View>
-                <View style={Style.displayContainer}>
-                    <Text>Guessed letters: </Text>
-                    {this._renderGuessedLetters()}
-                    <Text>{this.state.wrong}</Text>
-                </View>
-                <View style={Style.wordContainer}>
-                     <Text>The word is: </Text>
-                     {this._validate()}
-                     </View>
                 <View style={Style.inputContainer}>
                     {this._renderInputButtons()}
                 </View>
@@ -101,12 +101,12 @@ render() {
 
              guessedLetters.push(this.state.guessed.toString());
         }
-        if (guessedLetters.length > 0) {
+        /*if (guessedLetters.length > 0) {
             return (<View><Text> {guessedLetters.toString()} </Text></View>);
         }
 
 
-        return (<View><Text>Nothing guessed yet.</Text></View>);
+        return (<View><Text>Nothing guessed yet.</Text></View>);*/
 
     }
 
@@ -145,6 +145,24 @@ render() {
         }
 
     }
+
+    _renderImage(){
+        this._renderGuessedLetters();
+
+        switch (this.state.wrong) {
+          case 0 : return (<Image source={require('./Images/1.png')} />);
+          case 1 : return (<Image source={require('./Images/2.png')} />);
+          case 2 : return (<Image source={require('./Images/3.png')} />);
+          case 3 : return (<Image source={require('./Images/4.png')} />);
+          case 4 : return (<Image source={require('./Images/5.png')} />);
+          case 5 : return (<Image source={require('./Images/6.png')} />);
+          case 6 : return (<Image source={require('./Images/7.png')} />);
+
+        }
+
+
+    }
+
 
     searchArray(input){
     var arr = guessedLetters;
