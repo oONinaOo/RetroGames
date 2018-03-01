@@ -7,7 +7,7 @@ export default class InputButton extends React.Component{
 
    render() {
           return (
-              <Button style= {Style.inputButton}
+              <Button style= {[Style.inputButton, { backgroundColor: this.props.disabled ? '#000000' : '#42c5f4' }]}
                                   underlayColor="#193441"
                                   onPress={this.props.onPress}
                                   disabled={this.props.disabled}>

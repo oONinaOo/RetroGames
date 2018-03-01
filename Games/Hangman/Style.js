@@ -6,33 +6,47 @@ var Style = StyleSheet.create({
     },
 
     headerContainer: {
-        flex: 0.5,
-        backgroundColor: '#efefef'
+        flex: 1,
+        backgroundColor: '#e5e5e5'
     },
     displayContainer: {
-        flex: 3.5,
-        backgroundColor: '#efefef'
+        flex: 3,
+        backgroundColor: '#e5e5e5',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
 
     inputContainer: {
         flex: 3,
-        backgroundColor: '#d1d1d1'
+        backgroundColor: '#e5e5e5'
     },
 
     wordContainer: {
         flex: 1,
-        backgroundColor: '#efefef'
+        backgroundColor: '#e5e5e5',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
 
     hintContainer: {
         flex: 1,
-        backgroundColor: '#efefef'
+        backgroundColor: '#e5e5e5',
+        alignItems: 'center',
+        justifyContent: 'center',
+
     },
 
     wordText: {
 
         fontSize: 36,
         fontWeight: 'bold'
+    },
+
+    hintText: {
+
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#595757'
     },
 
     inputButton: {
@@ -43,6 +57,8 @@ var Style = StyleSheet.create({
             borderColor: '#91AA9D',
             marginRight: 2.5,
             marginLeft: 2.5,
+            borderRadius: 10,
+            elevation: 3,
         },
 
         inputButtonText: {
